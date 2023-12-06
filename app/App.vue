@@ -77,3 +77,9 @@ export default {
 	},
 };
 </script>
+<style scoped>
+	.k-link-field .k-grid {
+	--grid-inline-gap: 1.5rem;
+	--grid-block-gap: 1.5rem;
+	}
+</style>
