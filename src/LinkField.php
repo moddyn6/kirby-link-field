@@ -4,7 +4,7 @@ namespace Oblik\LinkField;
 
 use Kirby\Toolkit\Html;
 
-class Link
+class LinkField
 {
 	protected $data;
 	protected $page;

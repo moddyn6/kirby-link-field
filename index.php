@@ -3,7 +3,7 @@
 namespace Oblik\LinkField;
 
 load([
-	'Oblik\\LinkField\\Link' => 'src/Link.php'
+	'Oblik\\LinkField\\LinkField' => 'src/LinkField.php'
 ], __DIR__);
 
 use Kirby\Cms\App;
@@ -38,7 +38,7 @@ App::plugin('oblik/link-field', [
 		]
 	],
 	'fields' => [
-		'link' => [
+		'linkfield' => [
 			'mixins' => ['pagepicker', 'filepicker'],
 			'props' => [
 				'value' => function ($input = null) {
@@ -212,7 +212,7 @@ App::plugin('oblik/link-field', [
 			$value = $field->value();
 
 			if (is_string($value) && strpos($value, 'http') === 0) {
-				return new Link([
+				return new LinkField([
 					'type' => 'url',
 					'value' => $value
 				]);
@@ -220,7 +220,7 @@ App::plugin('oblik/link-field', [
 
 			$data = $field->yaml();
 
-			return new Link($data);
+			return new LinkField($data);
 		},
 		'toValidLink' => function ($field) {
 			$linkObject = $field->toLinkObject();
