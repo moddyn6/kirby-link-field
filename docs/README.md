@@ -23,7 +23,6 @@ With Composer from [oblik/kirby-link-field on packagist](https://packagist.org/p
 composer require oblik/kirby-link-field
 ```
 
-...or check out [other plugin installation methods](https://getkirby.com/docs/guide/plugins/plugin-setup-basic#the-three-plugin-installation-methods).
 
 ## Blueprint
 
